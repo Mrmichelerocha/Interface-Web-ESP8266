@@ -1,0 +1,55 @@
+
+virtualenv .venv
+source .venv/bin/activate
+deactivate
+
+
+python -m pip install django
+django-admin startproject web_project .
+python manage.py startapp index
+
+
+npm --version
+sudo apt install npm
+
+
+sudo apt install wget
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+source ~/.profile
+nvm ls-remote
+nvm install 18.12.0
+node -v
+
+npx create-react-app myapp
+npm run build
+npm start
+
+
+sqlite3 --version
+python manage.py makemigrations
+python manage.py migrate
+
+
+//criar admin
+python manage.py createsuperuser
+
+
+// rodart programad react and django
+npm run dev
+python manage.py runserver
+
+
+// Do tutorial
+py manage.py makemigrations --dry-run --verbosity 3
+pip install coverage
+coverage run --omit='*/venv/*' manage.py test
+coverage html
+pip install djangorestframework
+
+
+// requeri
+pip freeze > requirements.txt
+
+
+// install negocio 
+pip install django-cors-headers

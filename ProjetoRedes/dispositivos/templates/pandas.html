@@ -1,0 +1,93 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block titulo %}
+    Dispositivos
+{% endblock %}
+
+
+{% block conteudo %}
+       <!-- Content -->
+
+    <div class="container-xxl flex-grow-1 container-p-y">
+        <!-- Layout Demo -->
+        <div class="layout-demo-wrapper">
+            <div class="layout-demo-placeholder">
+            <!-- colocar o banco de Dispositivos-->
+                {{df|safe}}
+            </div>
+        </div>
+
+        <div class="layout-demo-wrapper">    
+          <canvas id="myChart1" width="200" height="60"></canvas>
+            <div>
+              <script type="text/javascript">
+                var ctx = document.getElementById('myChart1').getContext('2d');
+                var myChart1 = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: [{% for dia in data %} '{{ dia }}', {% endfor %}],
+                        datasets: [{
+                            label:'Tempo Decorrido',
+                            data: [{% for tempo in decorrido %} '{{ tempo }}', {% endfor %}],
+                            backgroundColor:[
+                            'rgba(54, 162, 135, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(151, 102, 132, 1)',
+                            'rgba(153, 99, 132, 1)',
+                            'rgba(255, 159, 64, 1)',
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 135, 1)',
+                            'rgba(25, 206, 86, 1)',
+                            'rgba(211, 192, 192, 1)',
+                            'rgba(234, 102, 132, 1)',
+                            'rgba(153, 99, 132, 1)',
+                            'rgba(255, 159, 64, 1)',
+                            'gree',
+                            'yellow',
+                            ],
+            
+                            borderColor: [
+                            'rgba(54, 162, 135, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(151, 102, 132, 1)',
+                            'rgba(153, 99, 132, 1)',
+                            'rgba(255, 159, 64, 1)',
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 135, 1)',
+                            'rgba(25, 206, 86, 1)',
+                            'rgba(211, 192, 192, 1)',
+                            'rgba(234, 102, 132, 1)',
+                            'rgba(153, 99, 132, 1)',
+                            'rgba(255, 159, 64, 1)',
+                            ],
+            
+                            borderWidth: 1
+                        }]
+                    },
+            
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }
+                })
+              </script>       
+            </div>
+        </div>
+        <div class="layout-demo-info">
+          <button class="btn btn-primary" type="button" onclick="history.back()">Voltar</button>
+        </div>
+      </div>
+      <!--/ Layout Demo -->
+    </div>
+    <!-- / Content -->
+
+{% endblock %}

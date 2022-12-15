@@ -1,0 +1,50 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block titulo %}
+    Dispositivos
+{% endblock %}
+
+
+{% block conteudo %}
+    <!-- Content -->
+
+    <div class="container-xxl flex-grow-1 container-p-y">
+      <!-- Layout Demo -->
+      <div class="layout-demo-wrapper">
+        <div class="layout-demo-placeholder">
+          <!-- colocar o banco de Dispositivos-->
+          
+        {% for item in page.object_list %}
+          <p></p>
+          <div class="card" style="width: 15rem;">
+              <div class="card-body">
+                  <h5 class="card-title">{{item.dispositivo.nome}}</h5>
+                  <p style="width: 10rem;">{{item.dispositivo.objetivo}}</p>
+                  <p style="width: 10rem;">{{item.decorrido}}</p> 
+                  <a href="/pandas/" class="btn btn-primary" style="display: flex;
+                  justify-content: space-between;
+                  flex-direction: column-reverse;">Go somewhere</a>
+              </div>
+          </div>
+        {% endfor %}
+
+        {% load static %}
+
+
+
+
+
+
+
+        </div>
+        <div class="layout-demo-info">
+          <button class="btn btn-primary" type="button" onclick="history.back()">Voltar</button>
+        </div>
+      </div>
+      <!--/ Layout Demo -->
+    </div>
+    <!-- / Content -->
+
+{% endblock %}
