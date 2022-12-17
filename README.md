@@ -4,7 +4,7 @@ Este sistema usa tratamento de dados de big data, para analise de graficos usand
 O site foi feito em django para comunicação entre dispositivo IoT, Nuvem ThingSpeak e tratamento de dados para monitoramento dos Relés
 
 
-![6 (1)]![WhatsApp Image 2022-12-17 at 12 16 29](https://user-images.githubusercontent.com/93664169/208249614-c6a02f3f-8205-477f-a7fc-f5449967f5a7.jpeg)
+![6 (1)]!(https://user-images.githubusercontent.com/93664169/208249614-c6a02f3f-8205-477f-a7fc-f5449967f5a7.jpeg)
 
 
 
@@ -29,11 +29,6 @@ Utilizando apenas **PYTHON** e as bibliotecas:
 > - Big Data
 > - ThingsSpeack (nuvem)
 > - Sinric 
-
-
-
-## 📜 Conteúdo
-Para aprender mais sobre como desenvolver projetos de Data Science, AI, Criação de Web Apps e Dashboards, acesse:
 
 
 <a href = ""><img src="![Captura de tela de 2022-12-17 12-44-16](https://user-images.githubusercontent.com/93664169/208249916-82d39e9d-9a95-4e77-b1c6-841e0b05e8f1.png)" target="_blank"></a> 
